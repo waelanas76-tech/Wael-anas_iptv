@@ -121,7 +121,7 @@ footer { padding-block: 40px 28px; color: var(--mut); font-size: .92rem; }
     <h1>Wanas <em>IPTV</em></h1>
     <p class="sub">مشغّل IPTV يعرض قنواتك وأفلامك ومسلسلاتك على موبايلك وعلى الشاشة الكبيرة، بواجهة عربية وإنجليزية وتحكم كامل.</p>
     <div class="cta">
-      <a class="btn primary" href="WanasIPTV.apk" download="WanasIPTV.apk">📱 تحميل للأندرويد</a>
+      <a class="btn primary" href="WaelAnasIPTV-multi-accounts.apk" download="WanasIPTV.apk">📱 تحميل للأندرويد</a>
       <a class="btn ghost" id="dl" href="#">📺 تحميل لسامسونج</a>
       <a class="btn ghost" id="seeVideo" href="#">شاهد طريقة التثبيت</a>
     </div>
@@ -139,7 +139,7 @@ footer { padding-block: 40px 28px; color: var(--mut); font-size: .92rem; }
       <li><b>اسمح بالتثبيت</b><span>افتح الملف، ولما الموبايل يسأل فعّل "السماح بالتثبيت من هذا المصدر" ثم اضغط تثبيت.</span></li>
       <li><b>سجّل بياناتك</b><span>افتح Wanas IPTV وأدخل بيانات Xtream أو رابط M3U واستمتع.</span></li>
     </ol>
-    <div class="cta" style="margin-top:18px"><a class="btn primary" href="WanasIPTV.apk" download="WanasIPTV.apk">📱 تحميل للأندرويد</a></div>
+    <div class="cta" style="margin-top:18px"><a class="btn primary" href="WaelAnasIPTV-multi-accounts.apk" download="WanasIPTV.apk">📱 تحميل للأندرويد</a></div>
   </section>
 
   <section id="steps">
@@ -226,14 +226,15 @@ footer { padding-block: 40px 28px; color: var(--mut); font-size: .92rem; }
     <details><summary>هل أقدر أجرب قبل ما أدفع؟</summary><p>أيوه، أول 3 أيام تجريبية مجانية.</p></details>
   </section>
 
-  <footer>Wanas IPTV · النسخة 1.9.0</footer>
+  <footer>Wanas IPTV · النسخة 1.10.0</footer>
 </main>
 </div>
-<div class="sticky"><a class="btn primary" href="WanasIPTV.apk" download="WanasIPTV.apk">📱 تحميل تطبيق الأندرويد</a></div>
+<div class="sticky"><a class="btn primary" href="WaelAnasIPTV-multi-accounts.apk" download="WanasIPTV.apk">📱 تحميل تطبيق الأندرويد</a></div>
 
 <script>
 /* ===== إعدادات الصفحة (عدّلها عند الحاجة) ===== */
-var DOWNLOAD_URL = "WanasIPTV_v1_9_0.wgt";        // ضع هنا رابط تحميل ملف البرنامج (Google Drive أو غيره)
+var DOWNLOAD_URL = "WanasIPTV_v1_10_0.wgt";        // ضع هنا رابط تحميل ملف البرنامج (Google Drive أو غيره)
+var APK_URL = "WaelAnasIPTV-multi-accounts.apk";   // اسم ملف الأندرويد في المستودع
 var VIDEO_SRC = "";           // اسم ملف فيديو مرفوع مع الصفحة، مثال: "install.mp4"
 var VIDEO_LINK = "";
 var YT_ID = "R9_mqh6AweQ";   // فيديو شرح التثبيت على يوتيوب          // أو رابط فيديو خارجي (يوتيوب/فيسبوك)
@@ -254,6 +255,9 @@ var YT_ID = "R9_mqh6AweQ";   // فيديو شرح التثبيت على يوتي
     e.preventDefault();
     $("video").scrollIntoView({ behavior: "smooth", block: "start" });
   });
+
+  // android links
+  Array.prototype.forEach.call(document.querySelectorAll("a[download]"), function (a) { a.href = APK_URL; });
 
   // download
   var dl = $("dl"), note = $("dlNote");
